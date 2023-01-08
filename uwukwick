@@ -1,0 +1,17 @@
+local Players = game.Players
+Players.PlayerRemoving:Connect(function(player)
+
+local args = {
+    [1] = ":kick ~uwu "..player.Name,
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = "[u~uwu] pwayer "..player.Name.. " got uwu'ed",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end)
